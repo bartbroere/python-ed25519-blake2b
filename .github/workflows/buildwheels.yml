@@ -23,9 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
 
       - name: Install cibuildwheel
-        run: \
-          git checkout 1.4.1
-          python -m pip install cibuildwheel
+        run: git checkout 1.4.1 && python -m pip install cibuildwheel
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
